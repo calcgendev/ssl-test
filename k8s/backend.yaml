@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ssl-test
+  labels:
+    app: ssl-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ssl-test
+  template:
+    metadata:
+      labels:
+        app: ssl-test
+    spec:
+      containers:
+        - name: ssl-test
+          image: "gcr.io/kuber-test-263901/ssl-test:latest"
+          ports:
+            - containerPort: 8080
+          resources:
+          limits:
+            memory: "100Mi"
+            cpu: "50m"
