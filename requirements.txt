@@ -6,8 +6,6 @@ certifi==2019.6.16
 chardet==3.0.4
 coverage==5.0.1
 Django==2.2.4
-git+git://github.com/calcgendev/django-machina.git@master
-git+git://github.com/calcgendev/django_helpdesk.git@master
 django-appconf==1.0.3
 django-bootstrap-form==3.4
 django-bootstrap-modal-forms==1.4.4
