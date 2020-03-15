@@ -6,5 +6,7 @@ RUN virtualenv --no-download /env -p python3.6
 # source /env/bin/activate
 ENV VIRTUAL_ENV /env
 ENV PATH /env/bin:$PATH
+ADD requirements.txt /app/
+RUN pip install -r requirements.txt
 ADD . /app/
 CMD gunicorn -b :$PORT calcgen_website.wsgi
