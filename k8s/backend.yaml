@@ -18,7 +18,7 @@ spec:
         - name: ssl-test
           image: "gcr.io/kuber-test-263901/ssl-test:latest"
           ports:
-            - containerPort: 8080
+            - containerPort: 8443
           resources:
             limits:
               memory: "100Mi"

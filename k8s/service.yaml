@@ -4,10 +4,13 @@ metadata:
   name: ssl-test-service
   labels:
     app: ssl-test
+  annotations:
+    service.alpha.kubernetes.io/app-protocols: '{"ssl-tls":"HTTPS"}'
 spec:
   type: NodePort
   ports:
-  - port: 80
-    targetPort: 8080
+  - name: "ssl-tls"
+    port: 443
+    targetPort: 8443
   selector:
     app: ssl-test
