@@ -19,6 +19,12 @@ spec:
           image: "gcr.io/kuber-test-263901/ssl-test:latest"
           ports:
             - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 5
           resources:
             limits:
               memory: "100Mi"
