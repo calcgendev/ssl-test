@@ -17,7 +17,7 @@ django-mptt==0.10.0
 django-oidc-provider==0.7.0
 django-storages==1.7.1
 django-widget-tweaks==1.4.5
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 email-reply-parser==0.5.9
 future==0.17.1
 google-api-core==1.14.2
